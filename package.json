@@ -1,9 +1,8 @@
 {
-	"name": "@egjs/hammerjs",
+	"name": "@rdlabo/hammerjs",
 	"title": "Hammer.JS",
 	"description": "A javascript library for multi-touch gestures",
-	"version": "2.0.17-snapshot",
-	"homepage": "http://naver.github.io/egjs",
+	"version": "2.0.0",
 	"license": "MIT",
 	"keywords": [
 		"touch",
@@ -11,10 +10,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/naver/hammer.js.git"
+		"url": "git://github.com/rdlabo/hammer.js.git"
 	},
 	"bugs": {
-		"url": "https://github.com/naver/hammer.js/issues"
+		"url": "https://github.com/rdlabo/hammer.js/issues"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.0.0",
@@ -36,6 +35,7 @@
 		"jshint-stylish": "^2.2.0",
 		"lodash-compat": "^3.10.2",
 		"node-qunit-phantomjs": "^1.4.0",
+		"np": "^10.2.0",
 		"print-sizes": "^0.1.0",
 		"qunitjs": "^2.0.0",
 		"rollup": "^0.66.0",
@@ -63,7 +63,8 @@
 		"watch": "run-when-changed --watch 'src/**/*.js' --watch 'tests/unit/*.js' --watch 'tests/unit/gestures/*.js' --exec 'npm run watch-tasks'",
 		"watch-tasks": "npm run rollup && npm run string-replace && npm run uglify && npm run jshint && npm run jscs",
 		"test": "npm run build && npm run qunit",
-		"test:node": "node ./dist/hammer.js"
+		"test:node": "node ./dist/hammer.js",
+    "release": "np --any-branch --no-tests"
 	},
 	"sideEffects": false,
 	"module": "dist/hammer.esm.js",
